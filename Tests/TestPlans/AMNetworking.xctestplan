@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "35F1F2ED-F679-430C-8511-C01B1162AEE1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AMNetworkingTests",
+        "name" : "AMNetworkingTests"
+      }
+    }
+  ],
+  "version" : 1
+}

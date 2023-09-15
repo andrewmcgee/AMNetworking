@@ -12,6 +12,24 @@ public struct SingleEndpoint: Endpoint {
     public let path: String
     public let queryItems: [String: String?]?
     public let httpMethod: HttpMethod?
-    public let headers: [String: String]?
+    public let headerFields: [String: String]?
     public let body: Data?
+    
+    public init(
+        scheme: String,
+        host: String,
+        path: String,
+        queryItems: [String : String?]? = nil,
+        httpMethod: HttpMethod? = nil,
+        headerFields: [String : String]? = nil,
+        body: Data? = nil
+    ) {
+        self.scheme = scheme
+        self.host = host
+        self.path = path
+        self.queryItems = queryItems
+        self.httpMethod = httpMethod
+        self.headerFields = headerFields
+        self.body = body
+    }
 }

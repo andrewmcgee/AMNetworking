@@ -8,6 +8,10 @@ import Foundation
 
 public struct DefaultHttpClient: HttpClient {
     public let urlSession: URLSession
+    
+    public init(urlSession: URLSession = .shared) {
+        self.urlSession = urlSession
+    }
 
     public func performRequest(
         to endpoint: Endpoint,
@@ -33,7 +37,7 @@ public struct DefaultHttpClient: HttpClient {
         cachePolicy: URLRequest.CachePolicy,
         timeoutInterval: TimeInterval
     ) throws -> URLRequest {
-        return try endpoint.makeRequest(cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
+        try endpoint.makeUrlRequest(cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
     }
     
     private func perform(request: URLRequest) async throws -> (Data, URLResponse) {

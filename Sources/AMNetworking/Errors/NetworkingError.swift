@@ -6,9 +6,9 @@
 
 import Foundation
 
-public enum NetworkingError: Error {
-    case requestError
-    case unexpectedResponse
-    case responseError(statusCode: Int)
+public enum NetworkingError: Error, Equatable {
     case invalidUrl
+    case requestError
+    case responseError(statusCode: Int)
+    case unexpectedResponse
 }
