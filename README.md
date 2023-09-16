@@ -2,7 +2,7 @@
 
 ## Background 
 
-A simple package used to encapsulate the networking functionality of my projects. Essentially it is a fully tested and mockable wrapper around URLSession.
+A simple package used to encapsulate networking functionality for my projects. Essentially it is a fully tested and mockable wrapper around URLSession.
 
 ## Installation
 
@@ -14,4 +14,6 @@ https://github.com/andrewmcgee/AMNetworking.git
 
 ## Usage
 
-Create an instance of an HttpClient and perform requests by passing Endpoint values to performRequest(to:cachePolicy:timeoutInterval:). Clients should either create instances of a SingleEndpoint in simple use-cases, but are also free to define their own types conforming to the Endpoint protocol. For example, you may wish to group related endpoints for a single host together, using an enum conforming to the protocol.
+Create an instance of a SingleEndpoint by specifying the various URL and request parameters. Alternatively, define your own type conforming to the Endpoint protocol. For example, you may wish to group related endpoints for a single host together, using an enum conforming to the Endpoint protocol.
+
+Once you have an Endpoint, use an instance of a DefaultHttpClient to perform requests by passing the Endpoint value to performRequest(to:cachePolicy:timeoutInterval:).
