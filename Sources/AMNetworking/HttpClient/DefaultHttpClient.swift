@@ -8,13 +8,14 @@ import Foundation
 
 /// The default implementation of an http client used to perform network requests by passing in any given `Endpoint`.
 public struct DefaultHttpClient: HttpClient {
-    
-    /// The instance of `URLSession` used when making requests.
-    public let urlSession: URLSession
+    let urlSession: URLSession
     
     /// Initializes an instance of a `DefaultHttpClient`.
-    /// - Parameter urlSession: The instance of `URLSession` used when making requests.
-    public init(urlSession: URLSession = .shared) {
+    public init() {
+        self.urlSession = .shared
+    }
+    
+    init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
     
