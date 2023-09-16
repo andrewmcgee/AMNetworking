@@ -10,7 +10,7 @@ A simple package used to encapsulate networking functionality for my projects. E
 
 AMNetworking can be added to an Xcode project as a swift package. Using the regular Xcode tool, search for the following URL:
 
-https://github.com/andrewmcgee/AMNetworking.git
+https://github.com/andrewmcgee/AMNetworking
 
 ## Usage
 
