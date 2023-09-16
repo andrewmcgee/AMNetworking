@@ -6,6 +6,8 @@
 
 import Foundation
 
+/// Encapsulates the values required to build a URL and URL request for a particular endpoint.
+/// Any type adopting this protocol can be passed to an `HttpClient` to perform a request to the endpoint.
 public protocol Endpoint {
     var scheme: String { get }
     var host: String { get }

@@ -6,6 +6,7 @@
 
 import Foundation
 
+/// Errors thrown by the package.
 public enum NetworkingError: Error, Equatable {
     case invalidUrl
     case requestError

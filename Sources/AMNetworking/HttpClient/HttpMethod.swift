@@ -6,6 +6,7 @@
 
 import Foundation
 
+/// Encapsulates the http methods used when defining `Endpoint` objects to make http requests.
 public enum HttpMethod {
     case get
     case post

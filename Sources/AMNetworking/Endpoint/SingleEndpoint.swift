@@ -6,6 +6,7 @@
 
 import Foundation
 
+/// A simple implementation `Endpoint` which can be used to define a single `Endpoint`.
 public struct SingleEndpoint: Endpoint {
     public let scheme: String
     public let host: String

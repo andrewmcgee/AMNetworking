@@ -6,13 +6,24 @@
 
 import Foundation
 
+/// The default implementation of an http client used to perform network requests by passing in any given `Endpoint`.
 public struct DefaultHttpClient: HttpClient {
+    
+    /// The instance of `URLSession` used when making requests.
     public let urlSession: URLSession
     
+    /// Initializes an instance of a `DefaultHttpClient`.
+    /// - Parameter urlSession: The instance of `URLSession` used when making requests.
     public init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
-
+    
+    /// Performs a network request for the given `Endpoint`.
+    /// - Parameters:
+    ///   - endpoint: The `Endpoint` for the request.
+    ///   - cachePolicy: The cache policy to use for the request.
+    ///   - timeoutInterval: The `TimeInterval` to be used when making the request.
+    /// - Returns: The `Data` provided in the endpoint's response.
     public func performRequest(
         to endpoint: Endpoint,
         cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy,

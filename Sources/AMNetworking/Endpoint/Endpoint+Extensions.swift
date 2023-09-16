@@ -6,6 +6,8 @@
 
 import Foundation
 
+// MARK: - Default values
+
 public extension Endpoint {
     var queryItems: [String: String?]? {
         nil
@@ -23,6 +25,8 @@ public extension Endpoint {
         nil
     }
 }
+
+// MARK: - Helper methods
 
 extension Endpoint {
     func makeUrl() throws -> URL {
