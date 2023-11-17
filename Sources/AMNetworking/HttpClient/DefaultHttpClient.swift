@@ -25,8 +25,8 @@ public struct DefaultHttpClient: HttpClient {
     ///   - cachePolicy: The cache policy to use for the request.
     ///   - timeoutInterval: The `TimeInterval` to be used when making the request.
     /// - Returns: The `Data` provided in the endpoint's response.
-    public func performRequest(
-        to endpoint: Endpoint,
+    public func performRequest<T: Endpoint>(
+        to endpoint: T,
         cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy,
         timeoutInterval: TimeInterval = 60.0
     ) async throws -> Data {
